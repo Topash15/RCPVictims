@@ -1,67 +1,92 @@
-body{
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'PT Sans', sans-serif;
+:root {
+  background: rgb(240, 240, 240);
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    background: url(./assets/pics/together-2450090_960_720.jpeg) center center no-repeat;
-    background-size: cover;
-    min-height: 400px;
-    padding: 1rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
 }
 
-header a{
-    color: white;
-    text-decoration: none;
+h2{
+    font-size: 1.5rem;
 }
 
-nav ul{
-    display: flex;
-    gap: 15px;
-    list-style: none;
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
 }
 
-.container{
-    margin: 0 10%;
+header {
+  display: flex;
+  justify-content: space-between;
+  background: url(./assets/pics/together-2450090_960_720.jpeg) center center
+    no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  padding: 1rem;
 }
 
-#call-to-action{
-    text-align: center;
+header a {
+  color: white;
+  text-decoration: none;
 }
 
-#call-to-action #top-text{
-    font-weight: 700;
-    font-size: 1.25rem;
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
 }
 
-#call-to-action #bottom-text{
-    color: #3c78d8;
-    font-size: 1.1rem;
+.container {
+  margin: 0 10%;
 }
 
-main{
-    display: grid;
-    grid-template-columns: 60% 40%;
+#call-to-action {
+  text-align: center;
 }
 
-#contact{
-    display: flex;
-    flex-direction: column;
+#call-to-action #top-text {
+  font-weight: 700;
+  font-size: 1.25rem;
 }
 
-#contact form{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 0 25%;
+#call-to-action #bottom-text {
+  color: #3c78d8;
+  font-size: 1.1rem;
 }
 
-footer{
-    margin: 5% 0;
-    min-height: 100px;
-    display: flex;
-    justify-content: center;
+main {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+#inner-text {
+  max-width: 64ch;
+}
+
+#inner-text p {
+  font-size: 1.25rem;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 25%;
+}
+
+footer {
+  margin: 5% 0;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
 }
