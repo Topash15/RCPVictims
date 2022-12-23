@@ -1,0 +1,67 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background: url(./assets/pics/together-2450090_960_720.jpeg) center center no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    padding: 1rem;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+nav ul{
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.container{
+    margin: 0 10%;
+}
+
+#call-to-action{
+    text-align: center;
+}
+
+#call-to-action #top-text{
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+#call-to-action #bottom-text{
+    color: #3c78d8;
+    font-size: 1.1rem;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 25%;
+}
+
+footer{
+    margin: 5% 0;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+}
