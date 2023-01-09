@@ -44,6 +44,7 @@ nav ul {
 
 .container {
   margin: 0 10%;
+  max-width: 1200px;
 }
 
 #call-to-action {
@@ -63,6 +64,7 @@ nav ul {
 main {
   display: grid;
   grid-template-columns: 60% 40%;
+  justify-items: center;
 }
 #inner-text {
   max-width: 64ch;
