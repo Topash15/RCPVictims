@@ -39,7 +39,7 @@
   <body>
     <header>
       <a id="logo" href="/"
-        ><img src="./assets/pics/screwed.png" alt="RCP" width="50px" />RCP</a
+        ><img src="./assets/pics/screwed.png" alt="RCP Logo" width="50px" />RCP</a
       >
       <nav>
         <ul>
@@ -49,11 +49,11 @@
       </nav>
     </header>
     <div id="call-to-action" class="container">
-      <p id="top-text">
+      <h1 id="top-text">
         Victims of Resolute Capital Partners, Choice Energy Holdings - III LLC,
         and Petrorock Mineral Holdings, LLC, Unite! Take Action to Recover your
         Loss!
-      </p>
+      </h1>
       <p id="bottom-text">
         Our mission is to gather the information of Victims so that we may hold
         a forum, form an organization, and decide what united action is
@@ -98,11 +98,12 @@ Short Narrative (100 words or less) of your suggestion for united action to reco
       <form id="contact-form">
         <div class="columns">
           <label for="first-name">First Name: </label>
-          <input type="text" name="first-name" required />
+          <input id="first-name" type="text" name="first-name" required />
           <label for="last-name">Last Name: </label>
-          <input type="text" name="last-name" />
+          <input id="last-name" type="text" name="last-name" />
           <label for="email">Email: </label>
           <input
+            id="email"
             type="email"
             name="email"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
@@ -110,16 +111,17 @@ Short Narrative (100 words or less) of your suggestion for united action to reco
           />
           <label for="phone-number">Phone Number: </label>
           <input
+            id="phone-number"
             type="tel"
             name="phone-number"
             placeholder="000-000-0000"
             required
           />
           <label for="date-of-default"> Date of Default: </label>
-          <input type="date" name="date-of-default" required />
+          <input id="date-of-default" type="date" name="date-of-default" required />
         </div>
         <label for="documents">Supporting Documents</label>
-        <input type="file" name="documents" />
+        <input id="documents" type="file" name="documents" />
         <label for="chrono-summary"
           >Chronological Summary of Communications with XXXX <br /><span
             >Beginning when XXXX began to evade payment, in the following
@@ -127,17 +129,17 @@ Short Narrative (100 words or less) of your suggestion for united action to reco
             Date, From: XXXX , Description</span
           ></label
         >
-        <textarea type="text" name="chrono-summary" required></textarea>
+        <textarea id="chono-summary" type="text" name="chrono-summary" required></textarea>
         <label for="damages"
           >Short Narrative of problems caused by XXXX default (100 words or
           less)</label
         >
-        <textarea type="text" name="damages" required></textarea>
+        <textarea id="damages" type="text" name="damages" required></textarea>
         <label for="future-actions"
           >Your suggestions for united action to recover our investments (100
           words or less)</label
         >
-        <textarea type="text" name="future-actions" required></textarea>
+        <textarea id="future-actions" type="text" name="future-actions" required></textarea>
         <button type="submit">Submit</button>
       </form>
     </section>
