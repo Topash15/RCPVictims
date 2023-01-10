@@ -43,7 +43,8 @@ header a {
 }
 
 header #logo{
-  font-weight: clamp(1.5rem, 2vw, 3rem);
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  font-weight: bold;
 }
 
 nav ul {
