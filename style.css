@@ -39,6 +39,11 @@ header {
 header a {
   color: white;
   text-decoration: none;
+  font-size: clamp(1.2rem, 1.7vw, 1.7rem);
+}
+
+header #logo{
+  font-weight: clamp(1.5rem, 2vw, 3rem);
 }
 
 nav ul {
@@ -47,24 +52,29 @@ nav ul {
   list-style: none;
 }
 
+nav a:hover{
+  text-decoration: underline;
+}
+
 .container {
-  width: clamp(90%, 10vw + 1rem, 1200px);
+  width: clamp(300px, 80vw + 1rem, 1200px);
   margin: 0 auto;
 }
 
 #call-to-action {
-  text-align: center;
-  font-style: italic;
+	text-align: center;
+	font-style: italic;
+	width: clamp(300px, 55vw + 1rem, 1200px);
 }
 
 #call-to-action #top-text {
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 #call-to-action #bottom-text {
   color: #3c78d8;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 main {
@@ -87,11 +97,14 @@ main {
 }
 
 #contact {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background: #d8d8d8;
-  padding-bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background: #d8d8d8;
+	padding-bottom: 1rem;
+	background: rgb(212,212,212);
+	background: linear-gradient(180deg, rgba(212,212,212,1) 8%, rgba(255,255,255,1) 100%);
+	border-top: 1px solid black;
 }
 
 #contact-form {
