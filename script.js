@@ -12,6 +12,7 @@ window.onload = function () {
       emailjs.sendForm("service_ap4pzyp", "template_vqcpy53", this).then(
         function () {
           btn.value="Sent Successfully!"
+          btn.disabled=true;
           console.log("SUCCESS!");
         },
         function (error) {
