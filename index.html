@@ -37,13 +37,14 @@
     <script type="text/javascript" src="./script.js"></script>
   </head>
   <body>
-    <header>
+    <header id="top">
       <a id="logo" href="/"
         ><img src="./assets/pics/screwed.png" alt="RCP Logo" width="50px" />RCP</a
       >
       <nav>
         <ul>
-          <!-- <li><a href="/">Home</a></li> -->
+          <li><a class="current" href="/">Home</a></li>
+          <li><a href="./more-info.html">More Info</a></li>
           <li><a href="#contact-form">Contact</a></li>
         </ul>
       </nav>
@@ -120,8 +121,8 @@ Short Narrative (100 words or less) of your suggestion for united action to reco
           <label for="date-of-default"> Date of Default: </label>
           <input id="date-of-default" type="date" name="date-of-default" required />
         </div>
-        <label for="documents">Supporting Documents</label>
-        <input id="documents" type="file" name="documents" />
+        <!-- <label for="documents">Supporting Documents</label> -->
+        <!-- <input id="documents" type="file" name="documents" /> -->
         <label for="chrono-summary"
           >Chronological Summary of Communications with XXXX <br /><span
             >Beginning when XXXX began to evade payment, in the following
@@ -144,6 +145,7 @@ Short Narrative (100 words or less) of your suggestion for united action to reco
       </form>
     </section>
     <footer>
+      <a href="#top">Back to Top</a>
       <p>
         Questions? Contact at J. Coppens
         <a href="mailto:RCPVictims@gmail.com?subject=RCP Victims"

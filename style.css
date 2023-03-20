@@ -1,5 +1,6 @@
 :root {
   background: #fefefe;
+  --text: #4c4c4c;
 }
 
 h1,
@@ -9,15 +10,16 @@ h4,
 h5,
 h6 {
   font-size: 1rem;
+  color: var(--text);
 }
 
-.center{
+.center {
   text-align: center;
   margin: 0 auto;
 }
 
-h2{
-    font-size: 1.5rem;
+h2 {
+  font-size: 1.5rem;
 }
 
 body {
@@ -26,11 +28,13 @@ body {
   font-family: "PT Sans", sans-serif;
 }
 
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
   background: url(./assets/pics/together-2450090_960_720.jpeg) center center
-    no-repeat, gray;
+      no-repeat,
+    gray;
   background-size: cover;
   min-height: 400px;
   padding: 1rem;
@@ -42,19 +46,55 @@ header a {
   font-size: clamp(1.2rem, 1.7vw, 1.7rem);
 }
 
-header #logo{
+header #logo {
   font-size: clamp(1.5rem, 2vw, 3rem);
   font-weight: bold;
 }
 
+/* NAVIGATION */
 nav ul {
   display: flex;
   gap: 15px;
   list-style: none;
 }
 
-nav a:hover{
-  text-decoration: underline;
+nav a{
+  transition: all 0.5s;
+}
+
+nav a:hover {
+  font-weight: 700;
+}
+
+nav a.current {
+  font-weight: 700;
+  font-style: italic;
+  pointer-events: none;
+}
+
+      /* Home tab when active */
+nav li:nth-child(1) :is(a.current, a:hover){
+  color: #6fc51e;
+}
+nav li:nth-child(2) :is(a.current, a:hover){
+  color: #ac7328;
+}
+nav li:nth-child(3) :is(a.current, a:hover){
+  color: #ac4d8b;
+}
+
+@media screen and (max-width: 1200px){
+  nav{
+    background: rgba(0, 0, 0, 0.452);
+    height: 3.5rem;
+    height: fit-content;
+    padding-right: 1rem;
+    /* width: 100%; */
+  }
+  nav ul{
+    justify-content: flex-end;
+    gap: 1rem;
+  }
 }
 
 .container {
@@ -62,10 +102,11 @@ nav a:hover{
   margin: 0 auto;
 }
 
+/* HOMEPAGE */
 #call-to-action {
-	text-align: center;
-	font-style: italic;
-	width: clamp(300px, 55vw + 1rem, 1200px);
+  text-align: center;
+  font-style: italic;
+  width: clamp(300px, 55vw + 1rem, 1200px);
 }
 
 #call-to-action #top-text {
@@ -92,21 +133,25 @@ main {
   font-size: 1.25rem;
 }
 
-@media only screen and (max-width: 760px){
-  main.container{
+@media only screen and (max-width: 760px) {
+  main.container {
     grid-template-columns: 1fr;
   }
 }
 
 #contact {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	background: #d8d8d8;
-	padding-bottom: 1rem;
-	background: rgb(212,212,212);
-	background: linear-gradient(180deg, rgba(212,212,212,1) 8%, rgba(255,255,255,1) 100%);
-	border-top: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #d8d8d8;
+  padding-bottom: 1rem;
+  background: rgb(212, 212, 212);
+  background: linear-gradient(
+    180deg,
+    rgba(212, 212, 212, 1) 8%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  border-top: 1px solid black;
 }
 
 #contact-form {
@@ -116,51 +161,83 @@ main {
   margin: 0 auto;
 }
 
-#contact-form .columns{
+#contact-form .columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-#contact-form label{
+#contact-form label {
   font-weight: bold;
 }
 
-#contact-form span{
+#contact-form span {
   font-weight: normal;
 }
 
-#contact-form input, #contact-form textarea{
+#contact-form input,
+#contact-form textarea {
   margin-bottom: 1rem;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
 
-#contact-form input:invalid, #contact-form textarea:invalid{
+#contact-form input:invalid,
+#contact-form textarea:invalid {
   border: 2px solid red;
 }
 
-#contact-form textarea{
+#contact-form textarea {
   height: 150px;
 }
 
-#contact-form #contact-btn{
+#contact-form #contact-btn {
   width: fit-content;
   margin: 0 auto;
   border-radius: 1rem;
   background-color: #3c78d8;
   color: white;
   border: 1px solid #3c78d8;
-  padding: .25rem 1rem;
+  padding: 0.25rem 1rem;
   font-size: 1.25rem;
+  transition: all 0.25s ease-out;
 }
 
-#contact-form #contact-btn:hover{
+#contact-form #contact-btn:hover {
   color: #3c78d8;
   background-color: #fff;
 }
 
+/* INNER-PAGE */
+main.inner-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-page-header {
+  width: 75%;
+  margin-inline: auto;
+  font-size: 1.7rem;
+}
+
+main.inner-page h2{
+  max-width: 75ch;
+  margin-inline: auto;
+}
+
+main.inner-page p {
+  line-height: 1.2;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  font-size: 1.2rem;
+  max-width: 75ch;
+  margin-inline: auto;
+}
+
+/* FOOTER */
 footer {
   margin: 5% 0;
   min-height: 100px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
