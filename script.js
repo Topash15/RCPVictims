@@ -2,6 +2,7 @@ window.onload = function () {
 
   const btn = document.getElementById("contact-btn");
 
+  if(btn){
   document
     .getElementById("contact-form")
     .addEventListener("submit", function (event) {
@@ -13,12 +14,13 @@ window.onload = function () {
         function () {
           btn.value="Sent Successfully!"
           btn.disabled=true;
-          console.log("SUCCESS!");
+          // console.log("SUCCESS!");
         },
         function (error) {
           btn.value="Failed to Send. Please Try Again"
-          console.log("FAILED...", error);
+          // console.log("FAILED...", error);
         }
       );
     });
+  }
 };
