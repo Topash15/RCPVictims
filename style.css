@@ -33,7 +33,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  background: url(./assets/pics/together-2450090_960_720.jpeg) center center
+  background: url(./assets/pics/together-2450090_960_720.webp) center center
       no-repeat,
     gray;
   background-size: cover;
